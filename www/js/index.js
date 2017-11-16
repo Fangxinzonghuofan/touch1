@@ -2,11 +2,21 @@
 
 $(document).on("pagecreate","#pageone",function(){                     
 
-	$('#taptext').on("Random",function) {
+	$('#submitButton').on("click",function() {
 	submitText();
-}
-    
+        if(random()){
+            navigator.notification.beep(1);
+        }
+        else{
+            navigator.notification.beep(2);
+        }
 });
-fuction tapText(){
-    alert!Math.round(Math.random());
+});
+function submitText() {
+	alert(random());
+}
+
+    
+function random() {
+	return !Math.round(Math.random());
 }
